@@ -23,7 +23,14 @@ const Rector = ({ name, pronoun, index }) => {
 
 const RectorList = ({ rectors }) => (
   <div className='d-flex flex-row justify-content-around w-50'>
-    {rectors.map((rector, index) => <Rector key={index} name={rector.name} pronoun={rector.pronoun} index={index} />)}
+    {rectors.map((rector, index) =>
+      <Rector
+        key={index}
+        name={rector.name}
+        pronoun={rector.pronoun}
+        index={index}
+      />
+    )}
   </div>
 );
 

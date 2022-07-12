@@ -31,7 +31,7 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
-  <title>Certificador</title>
+  <title>Certificador Oficial da UFG</title>
 </head>
 
 <body>
@@ -48,7 +48,10 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script>
-    const redefineUnit = () => document.body.style.setProperty('--unit', document.getElementById("preview-container").offsetWidth / 100 + 'px');
+    const redefineUnit = () => {
+      console.log('redefining unit...');
+      document.body.style.setProperty('--unit', document.getElementById("preview-container").offsetWidth / 100 + 'px');
+    };
 
     window.onload = redefineUnit;
     window.onresize = redefineUnit;
